@@ -1,16 +1,19 @@
-# icon_and_splash_screen
+# Icon & Splash Screen
 
-A new Flutter project.
+## Postionnement de l'icône sur le splash screen
 
-## Getting Started
+Pour modifier le positionnement de l'image de splashscreen (par défaut "bottom".
 
-This project is a starting point for a Flutter application.
+- adapter la valeur de android:gravity ("center" à place de "bottom"):
 
-A few resources to get you started if this is your first Flutter project:
+`./android/app/main/res/drawable/lauch_background.xml`
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+`./android/app/main/res/drawable-21/lauch_background.xml`
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/branding"/>
+    </item>
+```
+
+`flutter pub run flutter_native_splash:create`
